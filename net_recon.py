@@ -159,3 +159,12 @@ while True :
             for close_s in close_port :
                 print(f"{count}-Port : {close_s}")
                 count += 1
+
+    elif choice == "3" :
+        print("Goodbye!")
+        break
+
+    else :
+        print("Just choose one of the requirements and numbers provided.")
+        continue
+    
