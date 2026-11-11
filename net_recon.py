@@ -1,4 +1,4 @@
- 
+    
 # ⚔️ التدريب الهندسي (التحدي النهائي للمستوى الثاني)
 import socket 
 
@@ -11,7 +11,7 @@ close_port = [] # البروتات المغلقة
 # الset للتنظيف بدون تكرار
 set_port = set()
 
-
+clean_ip = ""
 
 while True :
     equ = "=="*20
@@ -135,6 +135,10 @@ while True :
             result_socket.close()
     elif choice == "2" :
 
+        if not clean_ip   :
+            print("[!] Error: No target IP added yet! Please choose option 1 first.")
+            continue
+
         # ==========================================
         # مرحلة طباعة التقرير النهائي (Reporting)
         # ==========================================
@@ -159,6 +163,7 @@ while True :
             for close_s in close_port :
                 print(f"{count}-Port : {close_s}")
                 count += 1
+
 
     elif choice == "3" :
         print("Goodbye!")
